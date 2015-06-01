@@ -2,7 +2,7 @@
 
 var Promise = require('es6-promise').Promise
 // just Node?
-var fetch = require('node-fetch')
+
 // Browserify?
 require('whatwg-fetch') //--> not a typo, don't store as a var
 
@@ -29,7 +29,6 @@ var requests = urls.map((url) => fetch(url).then((r) => r.json()))
 
 function qs(selector) {
     return document.querySelector(selector)
-    console.log(selector)
 }
 
 Promise.all(requests).then((data) => {
@@ -43,9 +42,6 @@ Promise.all(requests).then((data) => {
     qs('.profile ul').innerHTML = profile_string
     qs('.repos ul').innerHTML = repo_string
 })
-
-
-
 
 
 
