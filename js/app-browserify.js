@@ -21,9 +21,9 @@ require("babel/register")
     // start app
     // new Router()
 // }
+var token = '99137b772878f8a920ee0fb3a1afb07ed8802896'
 
-
-var urls = [ 'https://api.github.com/users/Aristone','https://api.github.com/users/Aristone/repos' ]
+var urls = [ 'https://api.github.com/users/Aristone + "?access_token=" + token','https://api.github.com/users/Aristone/repos+"?access_token=" + token' ]
 
 var requests = urls.map((url) => fetch(url).then((r) => r.json()))
 
