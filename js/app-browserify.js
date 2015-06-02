@@ -23,7 +23,7 @@ require("babel/register")
 // }
 var token = '99137b772878f8a920ee0fb3a1afb07ed8802896'
 
-var urls = [ 'https://api.github.com/users/Aristone + "?access_token=" + token','https://api.github.com/users/Aristone/repos+"?access_token=" + token' ]
+var urls = [ 'https://api.github.com/users/Aristone','https://api.github.com/users/Aristone/repos' ]
 
 var requests = urls.map((url) => fetch(url).then((r) => r.json()))
 
@@ -43,6 +43,28 @@ Promise.all(requests).then((data) => {
     qs('.repos ul').innerHTML = repo_string
 })
 
+
+    var Backbone = require("backbone")
+    var GithubRouter = Backbone.Router.extend({
+    routes: {
+        'profile/:username': 'drawProfile',
+        'profile/:username/:message': 'logMessage',
+        '*default': 'home'
+    },
+    drawProfile: function(user){
+        new GithubClient(user)
+    },
+    logMessage: function(user, message){
+        alert(`${user}: ${message}`)
+    },
+    home: function(slug){
+        alert("No username selected")
+    },
+    initialize: function(){
+        Backbone.history.start()
+    }
+})
+    var router = new GithubRouter()
 
 
 
