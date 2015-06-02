@@ -89,67 +89,68 @@ img {
  * YOUR CODE HERE
  */
 
-img {
+
+
+.container {
 
     position: absolute;
+    display: list-item;
+    top:0;
+    left:0;
+    margin: 0 0 0 0 ;
+    padding: 0 0 0 0 ;
+
+}
+
+.profile {
+
+    float: bottom;
+    display: absolute;
+    table-layout: inherit;
+    text-indent: 10px;
+    margin: 340px 40px 40px 40px ;
+    list-style: none;
+
+}
+
+.profile:first-child{
+    text-decoration: bold;
+
+
+}
+
+.pic {
+
+    position: absolute;
+    float: top;
     max-width: 240px;
-    border-radius: 2%;
-    margin: 20px 0 0 80px;
-    left: -20px;
+    border-radius: 5%;
+    top:0;
+    left:0;
+    margin: 100px 0 0 100px ;
+    padding: 0 0 0 0;
+}
 
+.repos {
 
+    position: absolute;
+    
+    list-style: none ;
+    text-decoration: none;
+    font-size: 1em;
+    margin: -320px 0px 0px 400px;
 }
 
 
 
 li {
 
-
-
-}
-
-.container {
-
-    position: absolute;
-    display: list-item;
-    top: 0%;
-    left: 50%;
-    padding: 10% 0% 0% 40%;
-
-}
-
-.profile {
-
-    position: relative;
-    display: list-item;
-    top: 130%;
-    bottom: 10%;
-    padding: 10% 0% 0% 40%;
-    
-
-}
-
-.profile:first-child{
-
-    font-weight: bold;
-    font-size: 2em;
-    font-family: Arial; sans-serif;
-}
-
-.repos {
-
-    position: absolute;
-    margin: 20px 0px 0px 400px;
-    list-style-type:none ;
+    list-style: none;
     text-decoration: none;
-    font-weight: bold;
-    font-size: 1em;
+    text-transform: none;
+
 
 }
-
-
-
-
 
 
 

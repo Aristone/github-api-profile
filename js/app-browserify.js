@@ -57,9 +57,9 @@ Promise.all(requests).then((data) => {
     logMessage: function(user, message){
         alert(`${user}: ${message}`)
     },
-    home: function(slug){
-        alert("No username selected")
-    },
+    // home: function(slug){
+    //     alert("No username selected")
+    // },
     initialize: function(){
         Backbone.history.start()
     }
