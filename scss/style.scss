@@ -89,38 +89,22 @@ img {
  * YOUR CODE HERE
  */
 
-
+ $textColor: rgb($148, $144, $182);
 
 .container {
-
     position: absolute;
-    display: list-item;
     top:0;
     left:0;
     margin: 0 0 0 0 ;
     padding: 0 0 0 0 ;
-
 }
-
 .profile {
-
     float: bottom;
     display: absolute;
-    table-layout: inherit;
-    text-indent: 10px;
     margin: 340px 40px 40px 40px ;
-    list-style: none;
-
+    border: none;
 }
-
-.profile:first-child{
-    text-decoration: bold;
-
-
-}
-
 .pic {
-
     position: absolute;
     float: top;
     max-width: 240px;
@@ -130,26 +114,25 @@ img {
     margin: 100px 0 0 100px ;
     padding: 0 0 0 0;
 }
-
 .repos {
-
+    color: $textColor;
     position: absolute;
-    
-    list-style: none ;
-    text-decoration: none;
-    font-size: 1em;
-    margin: -320px 0px 0px 400px;
-}
-
-
-
-li {
-
-    list-style: none;
-    text-decoration: none;
+    font-size: 2em;
+    text-decoration: bold;
     text-transform: none;
-
-
+}
+/*.blurb {
+    border: solid 1px gray;
+    border-left: none;
+    border-right: none;
+}
+*/
+li {
+    list-style: none;
+    text-decoration: bold;
+    text-transform: none;
+    list-style-position: outside;
+    /*border: solid 3px gray;*/
 }
 
 

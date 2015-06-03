@@ -44,28 +44,39 @@ Promise.all(requests).then((data) => {
 })
 
 
-    var Backbone = require("backbone")
+//     var Backbone = require("backbone")
+//     var GithubRouter = Backbone.Router.extend({
+//     routes: {
+//         'profile/:username': 'drawProfile',
+//         'profile/:username/:message': 'logMessage',
+//         '*default': 'home'
+//     },
+//     drawProfile: function(user){
+//         new GithubClient(user)
+//     },
+//     logMessage: function(user, message){
+//         alert(`${user}: ${message}`)
+//     },
+//     // home: function(slug){
+//     //     alert("No username selected")
+//     // },
+//     initialize: function(){
+//         Backbone.history.start()
+//     }
+// })
+//     var router = new GithubRouter()
+
     var GithubRouter = Backbone.Router.extend({
-    routes: {
-        'profile/:username': 'drawProfile',
-        'profile/:username/:message': 'logMessage',
-        '*default': 'home'
-    },
-    drawProfile: function(user){
-        new GithubClient(user)
-    },
-    logMessage: function(user, message){
-        alert(`${user}: ${message}`)
-    },
-    // home: function(slug){
-    //     alert("No username selected")
-    // },
-    initialize: function(){
-        Backbone.history.start()
-    }
-})
+
+        routes: {
+            ':username': 'drawProfile'
+        },
+        drawProfile: function(user){
+            new GithubClient(user).getData()
+        },
+        initialize: function(){
+            Backbone.history.start()
+        }
+    })
     var router = new GithubRouter()
-
-
-
 
